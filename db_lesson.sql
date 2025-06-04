@@ -54,18 +54,18 @@ Q3
     -> (16,'ララララララララララ');　
 
 Q4
-  update people set department_id =1 where 7 <= person_id and (age < 30 or 80 <= age) AND gender != 2;
-  update people set department_id =2 where 7 <= person_id and gender = 2;
-  update people set department_id =3 where 7 <= person_id and age between 30 and 40 AND gender != 2;
-  update people set department_id =4 where 7 <= person_id and name like '%ね' AND gender != 2;
-  update people set department_id =5 where 7 <= person_id and age between 40 and 50 AND gender != 2;
+  update people set department_id =1 where person_id in(7,8,9,);
+  update people set department_id =2 where person_id in(10,11,12,13);
+  update people set department_id =3 where person_id=14;
+  update people set department_id =4 where person_id=15;
+  update people set department_id =5 where person_id=16;
 
 
 Q5
   select name, age  from people where gender=1 order by age desc;
 
 Q6
-  peopleテーブル内にある、レコードが作製された日時の昇順で営業を対象に名前,メールアドレス,年齢の３つのカラムを取得しようとしている。
+  peopleテーブル内にある名前,メールアドレス,年齢の３つのカラムを取得し、営業の方を対象に、レコードが作製された日時の昇順で表示するクエリである。
 
 Q7
   select name from people where (age between 20 and 30 and gender=2) or (age between 40 and 50 and gender=1);
