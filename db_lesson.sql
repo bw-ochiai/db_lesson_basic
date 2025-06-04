@@ -65,7 +65,7 @@ Q5
   select name, age  from people where gender=1 order by age desc;
 
 Q6
-  peopleテーブル内のレコードが作製された日時の昇順で営業を対象に名前,メールアドレス,年齢の３つのカラムを取得しようとしている。
+  peopleテーブル内にある、レコードが作製された日時の昇順で営業を対象に名前,メールアドレス,年齢の３つのカラムを取得しようとしている。
 
 Q7
   select name from people where (age between 20 and 30 and gender=2) or (age between 40 and 50 and gender=1);
